@@ -12,16 +12,16 @@ export MOUNT_DIR=${MOUNT_DIR:-'/mnt'}
 export DATE=${DATE:-"$(date +%Y%m%d)"}
 export PORTAGE_DIR=${PORTAGE_DIR:-"/var/tmp/catalyst/snapshots"}
 # profiles supported are as follows
-# default/linux/amd64/13.0
-# default/linux/amd64/13.0/no-multilib
+# default/linux/amd64/17.0
+# default/linux/amd64/17.0/no-multilib
 # hardened/linux/amd64
 # hardened/linux/amd64/no-multilib
 # hardened/linux/amd64/selinux (eventually)
 # hardened/linux/amd64/no-multilib/selinux (eventually)
-export PROFILE=${PROFILE:-"default/linux/amd64/13.0"}
-if [[ "${PROFILE}" == "default/linux/amd64/13.0" ]]; then
+export PROFILE=${PROFILE:-"default/linux/amd64/17.0"}
+if [[ "${PROFILE}" == "default/linux/amd64/17.0" ]]; then
   PROFILE_SHORTNAME="amd64-default"
-elif [[ "${PROFILE}" == "default/linux/amd64/13.0/no-multilib" ]]; then
+elif [[ "${PROFILE}" == "default/linux/amd64/17.0/no-multilib" ]]; then
   PROFILE_SHORTNAME="amd64-default-nomultilib"
 elif [[ "${PROFILE}" == "hardened/linux/amd64" ]]; then
   PROFILE_SHORTNAME="amd64-hardened"

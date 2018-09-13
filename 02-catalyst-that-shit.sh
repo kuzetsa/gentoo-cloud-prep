@@ -15,20 +15,20 @@ export DATE=${DATE:-"$(date +%Y%m%d)"}
 export OUTDIR=${OUTDIR:-"/root/tmp/catalyst/gentoo"}
 export GIT_BASE_DIR=${GIT_BASE_DIR:-$( cd "$( dirname ${BASH_SOURCE[0]} )" && pwd )}
 # profiles supported are as follows
-# default/linux/amd64/13.0
-# default/linux/amd64/13.0/no-multilib
+# default/linux/amd64/17.0
+# default/linux/amd64/17.0/no-multilib
 # hardened/linux/amd64
 # hardened/linux/amd64/no-multilib
 # hardened/linux/amd64/selinux (eventually)
 # hardened/linux/amd64/no-multilib/selinux (eventually)
-export PROFILE=${PROFILE:-"default/linux/amd64/13.0"}
+export PROFILE=${PROFILE:-"default/linux/amd64/17.0"}
 
 
-if [[ "${PROFILE}" == "default/linux/amd64/13.0" ]]; then
+if [[ "${PROFILE}" == "default/linux/amd64/17.0" ]]; then
   PROFILE_SHORTNAME="amd64-default"
   SOURCE_SUBPATH="stage3-amd64-current"
   KERNEL_SOURCES="gentoo-sources"
-elif [[ "${PROFILE}" == "default/linux/amd64/13.0/no-multilib" ]]; then
+elif [[ "${PROFILE}" == "default/linux/amd64/17.0/no-multilib" ]]; then
   PROFILE_SHORTNAME="amd64-default-nomultilib"
   SOURCE_SUBPATH="stage3-amd64-nomultilib-current"
   KERNEL_SOURCES="gentoo-sources"

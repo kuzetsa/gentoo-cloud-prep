@@ -18,12 +18,12 @@ Run the scripts in order, and you'll have a shiny new set of files, depending on
 
 set the profile you want, valid ones are as follows
 
-- default/linux/amd64/13.0
-- default/linux/amd64/13.0/no-multilib
+- default/linux/amd64/17.0
+- default/linux/amd64/17.0/no-multilib
 - hardened/linux/amd64
 - hardened/linux/amd64/no-multilib
 
-`export PROFILE="default/linux/amd64/13.0"`
+`export PROFILE="default/linux/amd64/17.0"`
 
 Of note to hardened users is that this uses catalyst, which uses chroots, so you need to allow grsec things for chroots
 

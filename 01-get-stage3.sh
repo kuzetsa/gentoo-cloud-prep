@@ -10,22 +10,22 @@ export MIRROR=${MIRROR:-"http://gentoo.osuosl.org"}
 export OUTDIR=${OUTDIR:-"/var/tmp/catalyst/builds"}
 export PORTAGE_DIR=${PORTAGE_DIR:-"/var/tmp/catalyst/snapshots"}
 # profiles supported are as follows
-# default/linux/amd64/13.0
-# default/linux/amd64/13.0/no-multilib
+# default/linux/amd64/17.0
+# default/linux/amd64/17.0/no-multilib
 # hardened/linux/amd64
 # hardened/linux/amd64/no-multilib
 # hardened/linux/amd64/selinux (eventually)
 # hardened/linux/amd64/no-multilib/selinux (eventually)
-export PROFILE=${PROFILE:-"default/linux/amd64/13.0"}
+export PROFILE=${PROFILE:-"default/linux/amd64/17.0"}
 
 mkdir -p "${OUTDIR}"
 
-if [[ "${PROFILE}" == "default/linux/amd64/13.0" ]]; then
+if [[ "${PROFILE}" == "default/linux/amd64/17.0" ]]; then
   STAGE3_NAME="stage3-amd64-current.tar.bz2"
   STAGE3_REAL_PATH=$(curl -s "${MIRROR}/releases/amd64/autobuilds/latest-stage3-amd64.txt" | awk '/stage3/ { print $1 }')
   STAGE3_REAL_NAME=$(echo -n "${STAGE3_REAL_PATH}" | awk -F/ '{ print $2}')
   STAGE3_URL="${MIRROR}/releases/amd64/autobuilds/current-stage3-amd64/${STAGE3_REAL_NAME}"
-elif [[ "${PROFILE}" == "default/linux/amd64/13.0/no-multilib" ]]; then
+elif [[ "${PROFILE}" == "default/linux/amd64/17.0/no-multilib" ]]; then
   STAGE3_NAME="stage3-amd64-nomultilib-current.tar.bz2"
   STAGE3_REAL_PATH=$(curl -s "${MIRROR}/releases/amd64/autobuilds/latest-stage3-amd64-nomultilib.txt" | awk '/stage3/ { print $1 }')
   STAGE3_REAL_NAME=$(echo -n "${STAGE3_REAL_PATH}" | awk -F/ '{ print $2}')
